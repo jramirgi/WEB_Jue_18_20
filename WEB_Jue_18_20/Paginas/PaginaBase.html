@@ -1,0 +1,410 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Plantilla controles</title>
+    <link href="Estilos/css/all.min.css" rel="stylesheet" />
+    <!-- daterange picker -->
+    <link href="Estilos/daterangepicker.css" rel="stylesheet" />
+    <!-- Tempusdominus Bootstrap 4 -->
+    <link href="Estilos/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+    <!-- Select2 -->
+    <link href="Estilos/select2.min.css" rel="stylesheet" />
+    <link href="Estilos/select2-bootstrap4.min.css" rel="stylesheet" />
+    <!-- Theme style -->
+    <link href="Estilos/adminlte.min.css" rel="stylesheet" />
+</head>
+<body class="hold-transition sidebar-mini">
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <!-- left column -->
+                <div class="col-md-12" id="dvMenu">
+                </div>
+                <div class="col-md-12">
+                    <!-- general form elements -->
+                    <div class="card card-primary">
+                        <div class="card-header">
+                            <h3 class="card-title">CONTROLES BASE PARA PÁGINAS HTML</h3>
+                        </div>
+                        <!-- /.card-header -->
+                        <!-- form start -->
+                        <form id="frmIncapacidades">
+                            <div class="card-body">
+                                <div class="card card-gray-dark">
+                                    <div class="card-header">
+                                        <h3 class="card-title">CONTROLES BÁSICOS</h3>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-md-2">
+                                                <div class="form-group">
+                                                    <label for="txtInput">INPUT NORMAL</label>
+                                                    <input type="text" class="form-control" id="txtInput" placeholder="Input para ingreso de datos">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <div class="form-group">
+                                                    <label for="txtNumero">INPUT NÚMEROS</label>
+                                                    <input type="number" class="form-control" id="txtNumero" placeholder="Input para ingreso de números">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <div class="form-group">
+                                                    <label for="txtPassword">INPUT PASSWORD</label>
+                                                    <input type="password" class="form-control" id="txtPassword" placeholder="Input para ingreso de claves">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <div class="form-group">
+                                                    <label for="txtCalendario">INPUT CALENDARIO</label>
+                                                    <input type="date" class="form-control" id="txtCalendario" placeholder="CALENDARIO">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <div class="form-group">
+                                                    <label for="txtCalendario">INPUT CALENDARIO 1</label>
+                                                    <div class="input-group date" id="dtmFecha" data-target-input="nearest">
+                                                        <input type="text" class="form-control datetimepicker-input" data-target="#dtmFecha" />
+                                                        <div class="input-group-append" data-target="#dtmFecha" data-toggle="datetimepicker">
+                                                            <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <div class="form-group">
+                                                    <label for="chkEjemplo">ACTIVO - CHECKBOX</label>
+                                                    <input type="checkbox" class="form-control" id="chkEjemplo" placeholder="CHECKBOX">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-2">
+                                                <div class="form-group">
+                                                    <label for="txtColor">INPUT COLOR</label>
+                                                    <input type="color" class="form-control" id="txtColor" placeholder="Input para color">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <div class="form-group">
+                                                    <label for="txtFechaHora">INPUT FECHA-HORA</label>
+                                                    <input type="datetime" class="form-control" id="txtFechaHora" placeholder="Input para ingreso fecha y hora">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <div class="form-group">
+                                                    <label for="txtEmail">INPUT EMAIL</label>
+                                                    <input type="email" class="form-control" id="txtEmail" placeholder="Input para email">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <div class="form-group">
+                                                    <label for="optRadio">RADIO BUTTON</label>
+                                                    <input type="radio" class="form-control" id="optRadio1" name="optRadio" placeholder="RADIO BUTTON">
+                                                    <input type="radio" class="form-control" id="optRadio2" name="optRadio" placeholder="RADIO BUTTON">
+                                                    <input type="radio" class="form-control" id="optRadio3" name="optRadio" placeholder="RADIO BUTTON">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <div class="form-group">
+                                                    <label for="txtTelefono">INPUT TELEFONO</label>
+                                                    <input type="tel" class="form-control" id="txtTelefono" placeholder="INPUT TELÉFONO">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <div class="form-group">
+                                                    <label for="cboEjemplo">SELECT</label>
+                                                    <select id="cboEjemplo" class="form-control">
+                                                        <option value="1">VALOR 1</option>
+                                                        <option value="2">VALOR 2</option>
+                                                        <option value="3">VALOR 3</option>
+                                                        <option value="4">VALOR 4</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card card-danger">
+                                    <div class="card-header">
+                                        <h3 class="card-title">CONTROLES AVANZADOS</h3>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-md-2">
+                                                <!--
+                                                    Requiere
+                                                    Hojas de estilo:
+                                                    <link href="Estilos/select2.min.css" rel="stylesheet" />
+                                                    <link href="Estilos/select2-bootstrap4.min.css" rel="stylesheet" />
+                                                    js:
+                                                    <script src="../Scripts/select2.min.js"></script>
+                                                    y definir el código de la página:
+                                                    $('#cboPaises').select2();
+                                                    $('#cboEstados').select2();
+
+                                                    //Select 2 con funciones especiales
+                                                    $('#cboMultiple').select2({
+                                                        theme: 'bootstrap4'
+                                                    })
+                                                    Aplica para los 3 selects de esta fila
+                                                -->
+                                                <div class="form-group">
+                                                    <label>Select con búsqueda 1</label>
+                                                    <select class="form-control select2" id="cboEstados" style="width: 100%;">
+                                                        <option selected="selected">Alabama</option>
+                                                        <option>Alaska</option>
+                                                        <option>California</option>
+                                                        <option>Delaware</option>
+                                                        <option>Tennessee</option>
+                                                        <option>Texas</option>
+                                                        <option>Washington</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <div class="form-group">
+                                                    <label>Select con busqueda 2</label>
+                                                    <select class="form-control select2" id="cboPaises" style="width: 100%;">
+                                                        <option selected="selected">Colombia</option>
+                                                        <option>Ecuador</option>
+                                                        <option>Venezuela</option>
+                                                        <option>Costa Rica</option>
+                                                        <option>Argentina</option>
+                                                        <option>Brasil</option>
+                                                        <option>Chile</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <label>Multiple Modificado</label>
+                                                    <div class="select2">
+                                                        <select id="cboMultiple" class="select2" multiple="multiple" data-placeholder="Select a State" style="width: 100%;">
+                                                            <option>Alabama</option>
+                                                            <option>Alaska</option>
+                                                            <option>California</option>
+                                                            <option>Delaware</option>
+                                                            <option>Tennessee</option>
+                                                            <option>Texas</option>
+                                                            <option>Washington</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <div class="form-group">
+                                                    <!--
+                                                        Requiere de este código en el archivo .js
+                                                        $('[data-mask]').inputmask()
+                                                    -->
+                                                    <label>Máscara de fecha</label>
+                                                    <div class="input-group">
+                                                        <div class="input-group-prepend">
+                                                            <span class="input-group-text"><i class="far fa-calendar-alt"></i></span>
+                                                        </div>
+                                                        <input type="text" class="form-control" data-inputmask-alias="datetime" data-inputmask-inputformat="yyyy/mm/dd" data-mask placeholder="yyyy/mm/dd">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <!--
+                                                    Se debe agregar esta línea en el archivo .js
+                                                    $('[data-mask]').inputmask()
+                                                -->
+                                                <div class="form-group">
+                                                    <label>Máscara para teléfono</label>
+                                                    <div class="input-group">
+                                                        <div class="input-group-prepend">
+                                                            <span class="input-group-text"><i class="fas fa-phone"></i></span>
+                                                        </div>
+                                                        <input type="text" class="form-control" data-inputmask='"mask": "(999) 999-9999"' data-mask>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-2">
+                                                <div class="bootstrap-timepicker">
+                                                    <div class="form-group">
+                                                        <label>Hora:</label>
+                                                        <div class="input-group date" id="tmHoraInicio" data-target-input="nearest">
+                                                            <input type="text" class="form-control datetimepicker-input" data-target="#tmHoraInicio" />
+                                                            <div class="input-group-append" data-target="#tmHoraInicio" data-toggle="datetimepicker">
+                                                                <div class="input-group-text"><i class="far fa-clock"></i></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <div class="form-group">
+                                                    <label>Fecha y hora</label>
+                                                    <div class="input-group date" id="dthFechaHora" data-target-input="nearest">
+                                                        <input type="text" class="form-control datetimepicker-input" data-target="#dthFechaHora" />
+                                                        <div class="input-group-append" data-target="#dthFechaHora" data-toggle="datetimepicker">
+                                                            <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--
+                                                Para los rangos de fecha se requiere:
+                                                hojas de estilo:
+                                                <link href="Estilos/daterangepicker.css" rel="stylesheet" />
+                                                <link href="Estilos/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+                                                scripts:
+                                                <script src="../Scripts/daterangepicker.js"></script>
+                                                <script src="../Scripts/tempusdominus-bootstrap-4.min.js"></script>
+                                                y en el código del archivo .js
+                                                //Calendario
+                                                Aplica para el calendario con picker
+                                                $('#dtmFecha').datetimepicker({
+                                                    format: 'L'
+                                                });
+                                                Aplica para el picker con fecha y hora
+                                                //Fecha y hora
+                                                $('#dthFechaHora').datetimepicker({ icons: { time: 'far fa-clock' } });
+                                                $('#RangoFechas').daterangepicker()
+                                                //Rango de fechas con hora
+                                                $('#RangoFechaHora').daterangepicker({
+                                                    timePicker: true,
+                                                    timePickerIncrement: 30,
+                                                    locale: {
+                                                        format: 'MM/DD/YYYY hh:mm A'
+                                                    }
+                                                });
+                                                //Timepicker
+                                                $('#tmHoraInicio').datetimepicker({
+                                                    format: 'LT'
+                                                });
+                                            -->
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <label>Rango fechas</label>
+                                                    <div class="input-group">
+                                                        <div class="input-group-prepend">
+                                                            <span class="input-group-text">
+                                                                <i class="far fa-calendar-alt"></i>
+                                                            </span>
+                                                        </div>
+                                                        <input type="text" class="form-control float-right" id="RangoFechas">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <label>Rango fechas y hora</label>
+                                                    <div class="input-group">
+                                                        <div class="input-group-prepend">
+                                                            <span class="input-group-text"><i class="far fa-clock"></i></span>
+                                                        </div>
+                                                        <input type="text" class="form-control float-right" id="RangoFechaHora">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card card-green">
+                                    <div class="card-header">
+                                        <h3 class="card-title">BOTONES</h3>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-md-2">
+                                                <div class="form-group">
+                                                    <button type="button" id="btnPrimary" class="btn-block btn-lg btn-primary">BOTÓN PRIMARY</button>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <div class="form-group">
+                                                    <button type="button" id="btnSecondary" class="btn-block btn-lg btn-secondary">BTN SECONDARY</button>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <div class="form-group">
+                                                    <button type="button" id="btnDanger" class="btn-block btn-lg btn-danger">BOTÓN DANGER</button>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <div class="form-group">
+                                                    <button type="button" id="btnDark" class="btn-block btn-lg btn-dark">BOTÓN DARK</button>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <div class="form-group">
+                                                    <button type="button" id="btnSuccess" class="btn-block btn-lg btn-success">BOTÓN SUCCESS</button>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <div class="form-group">
+                                                    <button type="button" id="btnWarning" class="btn-block btn-lg btn-warning">BTN WARNING</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <div id="dvMensaje" class=""></div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="../Scripts/jquery-3.4.1.min.js"></script>
+    <script src="../Scripts/bootstrap.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="../Scripts/bootstrap.bundle.min.js"></script>
+    <!-- Select2 -->
+    <script src="../Scripts/select2.min.js"></script>
+    <!-- InputMask -->
+    <script src="../Scripts/moment.min.js"></script>
+    <script src="../Scripts/jquery.inputmask.min.js"></script>
+    <!-- date-range-picker -->
+    <script src="../Scripts/daterangepicker.js"></script>
+    <!-- Tempusdominus Bootstrap 4 -->
+    <script src="../Scripts/tempusdominus-bootstrap-4.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="../Scripts/adminlte.js"></script>
+    <script>
+        $(function () {
+            $("#dvMenu").load("../Paginas/Menu.html");
+            //Select2
+            $('#cboPaises').select2();
+            $('#cboEstados').select2();
+
+            //Select 2 con funciones especiales
+            $('#cboMultiple').select2({
+                theme: 'bootstrap4'
+            })
+            //Calendario
+            $('#dtmFecha').datetimepicker({
+                format: 'L'
+            });
+            //Fecha y hora
+            $('#dthFechaHora').datetimepicker({ icons: { time: 'far fa-clock' } });
+            $('[data-mask]').inputmask();
+            //Rango de horas
+            $('#RangoFechas').daterangepicker();
+            //Rango de fechas con hora
+            $('#RangoFechaHora').daterangepicker({
+                timePicker: true,
+                timePickerIncrement: 30,
+                locale: {
+                    format: 'MM/DD/YYYY hh:mm A'
+                }
+            });
+            //Timepicker
+            $('#tmHoraInicio').datetimepicker({
+                format: 'LT'
+            });
+        })
+    </script>
+</body>
+</html>
