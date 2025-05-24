@@ -121,6 +121,12 @@
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="Imagenes\Activar.png" />
+    <Content Include="Imagenes\Buscar.jpg" />
+    <Content Include="Imagenes\Edit.png" />
+    <Content Include="Imagenes\Editar.png" />
+    <Content Include="Imagenes\Eliminar.png" />
+    <Content Include="Paginas\Clientes.html" />
     <Content Include="Paginas\Empleado.html" />
     <Content Include="Paginas\Estilos\adminlte.css" />
     <Content Include="Paginas\Estilos\adminlte.min.css" />
@@ -163,6 +169,7 @@
     <Content Include="Paginas\Pagina1.html" />
     <Content Include="Paginas\Pagina2.html" />
     <Content Include="Paginas\PaginaBase.html" />
+    <Content Include="Paginas\Scripts\Clientes.js" />
     <Content Include="Paginas\Scripts\Comunes\Comunes.js" />
     <Content Include="Paginas\Scripts\Comunes\CRUD.js" />
     <Content Include="Paginas\Scripts\Empleado.js" />
