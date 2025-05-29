@@ -1,0 +1,165 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Factura de compra</title>
+
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Font Awesome -->
+    <link href="Estilos/all.min.css" rel="stylesheet" />
+    <!-- Theme style -->
+    <link href="Estilos/adminlte.min.css" rel="stylesheet" />
+    <!-- Select2 -->
+    <link href="Estilos/select2.min.css" rel="stylesheet" />
+    <!-- Estilos para el datatable -->
+    <link href="Estilos/dataTables.min.css" rel="stylesheet" />
+    <link href="Estilos/dataTables.bootstrap4.min.css" rel="stylesheet" />
+</head>
+<body class="hold-transition sidebar-mini">
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12" id="dvMenu">
+                </div>
+                <!-- left column -->
+                <div class="col-md-12">
+                    <!-- general form elements -->
+                    <div class="card card-primary">
+                        <div class="card-header">
+                            <h3 class="card-dark" id="idTitulo">FACTURA DE COMPRA</h3>
+                        </div>
+                        <!-- /.card-header -->
+                        <!-- form start -->
+                        <form id="frmFacturacion">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-1">
+                                        <div class="form-group">
+                                            <label for="txtNumeroFactura">Factura</label>
+                                            <input type="text" class="form-control" id="txtNumeroFactura" placeholder="Número de factura" disabled>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div class="form-group">
+                                            <label for="txtFechaCompra">Fecha</label>
+                                            <input type="text" class="form-control" id="txtFechaCompra" placeholder="Fecha compra" disabled>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div class="form-group">
+                                            <label for="txtDocumento">Documento del cliente</label>
+                                            <input type="text" class="form-control" id="txtDocumento" placeholder="Documento cliente">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-1">
+                                        <div class="form-group">
+                                            <img id="btnBuscar" src="../Imagenes/Buscar.jpg" onclick="Consultar()" />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label for="txtNombreCliente">Nombre del cliente</label>
+                                            <input type="text" class="form-control" id="txtNombreCliente" placeholder="Nombre del cliente" disabled>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div class="form-group">
+                                            <label for="txtTotalCompra">Total compra</label>
+                                            <input type="text" class="form-control" id="txtTotalCompra" placeholder="Total" disabled>
+                                            <input type="text" class="form-control" id="txtidEmpleado" placeholder="" hidden>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label for="cboTipoProducto">Tipo Producto</label>
+                                            <!-- Se levanta el evento onchange cuando se elige un tipo de producto -->
+                                            <select id="cboTipoProducto" class="form-control select2" style="width: 100%;" onchange="ListarProductos(0)">
+                                                <option selected="selected" value="0">Seleccione un tipo de producto</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label for="cboProducto">Producto</label>
+                                            <!--En el combo producto se levanta el evento on change, para que calcule el valor unitario del producto seleccinado-->
+                                            <select id="cboProducto" class="form-control select2" style="width: 100%;" onchange="CalcularSubtotal()">
+                                                <option selected="selected" value="0">Seleccione el producto</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div class="form-group">
+                                            <label for="txtValorUnitario">Valor Unitario</label>
+                                            <input type="text" class="form-control" id="txtValorUnitarioTexto" placeholder="Valor producto" disabled>
+                                            <!--Se agregan textos ocultos para facilitar la captura de la información y no repetir procesos-->
+                                            <input type="text" class="form-control" id="txtValorUnitario" placeholder="Valor producto" hidden>
+                                            <input type="text" class="form-control" id="txtCodigoProducto" placeholder="Codigo producto" hidden>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div class="form-group">
+                                            <!--Cuando cambia la cantidad se recalcula el valor unitario-->
+                                            <label for="txtCantidad">Cantidad</label>
+                                            <input type="number" class="form-control" id="txtCantidad" placeholder="Cantidad" value="1" onchange="CalcularSubtotal()">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div class="form-group">
+                                            <label for="txtSubtotal">Subtotal</label>
+                                            <input type="text" class="form-control" id="txtSubtotal" placeholder="Subtotal" disabled>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <button type="button" id="btnAgregar" class="btn-block btn-lg btn-primary" onclick="GrabarProducto()">GRABAR PRODUCTO</button>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <button type="button" id="btnGrabarFactura" class="btn-block btn-lg btn-primary" onclick="GrabarFactura()" disabled>TERMINAR FACTURA</button>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <table id="tblFactura" class="display" style="width:100%">
+                                            <thead>
+                                                <tr>
+                                                    <th>Eliminar</th>
+                                                    <th>Tipo producto</th>
+                                                    <th>Producto</th>
+                                                    <th>Cantidad</th>
+                                                    <th>Valor Unitario</th>
+                                                    <th>Subtotal</th>
+                                                </tr>
+                                            </thead>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /.card-body -->
+                            <div class="card-footer">
+                                <div id="dvMensaje" class=""></div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="../Scripts/jquery.min.js"></script>
+    <script src="../Scripts/bootstrap.bundle.min.js"></script>
+    <!--Tables-->
+    <script src="../Scripts/jquery.dataTables.min.js"></script>
+    <script src="../Scripts/dataTables.bootstrap4.min.js"></script>
+    <!-- Select2 -->
+    <script src="../Scripts/select2.min.js"></script>
+    <!--Archivos comunes-->
+    <script src="Scripts/Menu.js"></script>
+    <script src="Scripts/Comunes/CRUD.js"></script>
+    <script src="Scripts/Comunes/Comunes.js"></script>
+    <script src="Scripts/Facturacion.js"></script>
+</body>
+</html>
